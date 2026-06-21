@@ -1,0 +1,9 @@
+from pymongo import MongoClient
+
+MONGO_URI = "mongodb://localhost:27017/"
+DATABASE_NAME = "lashstock_db"
+
+client = MongoClient(MONGO_URI)
+db = client[DATABASE_NAME]
+
+productos_collection = db["productos"]
